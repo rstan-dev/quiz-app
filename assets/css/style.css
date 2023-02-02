@@ -1,7 +1,12 @@
 /* Standard setup for most projects  */
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-color: white;
+    background-color: rgb(164, 149, 149);
+    background-image: linear-gradient(315deg, rgb(164, 149, 149) 0%, white 100%);
+    /* applies a gradient to the background colors */
     font-family: 'Roboto', sans-serif;
     margin: 0;
     display: flex;
@@ -15,4 +20,30 @@ body {
     /* takes up 100% of the viewport height  */
     overflow: hidden;
     /* prevents scroll bard from showing by default  */
+}
+
+.quiz-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    /* sets the opacity of the black shadow and shadow to the bottom and left hand side */
+    width: 600px;
+    overflow: hidden;
+    /* keeps content inside box */
+}
+
+.quiz-header {
+    padding: 4rem;
+    /* 4 x the root HTML element font-size */
+}
+
+h2 {
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
