@@ -47,3 +47,35 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+
+ul li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+ul li label {
+    cursor: pointer;
+    /* creates a hand pointer on hover */
+}
+
+button {
+    background-color: rgb(84, 84, 194);
+    color: white;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 1.3rem;
+}
+
+button:hover {
+    background-color: rgb(68, 68, 173);
+}
+
+button:focus {
+    outline: none;
+    background-color: rgb(39, 39, 228);
+}
