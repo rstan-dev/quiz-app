@@ -47,10 +47,60 @@ let score = 0;
 loadQuiz();
 
 function loadQuiz() {
+
+    deselectAnswers()
+
     const currentQuizData = quizData[currentQuiz]; //sets the index of the question array to 0 //
 
     questionElement.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
-
-
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;
 };
+
+function deselectAnswers() {
+    answerElements.forEach(answerElements => answerElements.checked = false)
+};
+
+
+function getSelected() {
+    let answer // this is initially undeclared - called "initialised"
+
+
+    answerElements.forEach(answerElement => {
+        if (answerElement.checked) {
+            answer = answerElement.id // pushes the checked radio id to variable answer
+        }
+    })
+
+    return answer;
+};
+
+
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    // console.log(answer) - shows which answer id in the concole to test its working //
+
+    if (answer) {
+        if (answer === quizData[currentQuiz].correct) {
+            score++; // increments the score if the answer is correct
+        }
+
+        currentQuiz++; //increments the quiz questions array
+
+        if (currentQuiz < quizData.length) {
+            loadQuiz(); // loads the quiz again (its been incremented to the next quiz question)
+
+        } else {
+            quiz.innerHTML = `
+            <h2>You answered ${score} out of ${quizData.length} questions correctly. </h2>
+
+            <button onclick="location.reload()">Reload Quiz</button>  
+            `
+        } // when its reached the end of the quizData array, it replaces all of the quiz div's inner HTML with h2 and new button text and new button functionality - The location.reload() method reloads the current URL, like the Refresh button.
+    }
+
+
+
+});
