@@ -1,7 +1,7 @@
 /* Standard setup for most projects  */
 
 body {
-    background-color: rgb(124, 238, 179);
+    background-color: white;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     display: flex;

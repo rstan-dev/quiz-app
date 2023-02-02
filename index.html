@@ -12,14 +12,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap" rel="stylesheet">
-    <title>Project Title</title>
+    <title>The Quick Quiz</title>
 </head>
 
 <body>
-    <h1>Project Start Page</h1>
-    <p>test paragraph content</p>
-    <h2>heading 2 test content</h2>
-    <p>more test p content</p>
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">Question Text</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a">
+                    <label for="a" id="a_text">Question</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="b">
+                    <label for="b" id="b_text">Question</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="c">
+                    <label for="c" id="c_text">Question</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="d">
+                    <label for="d" id="d_text">Question</label>
+                </li>
+            </ul>
+        </div>
+        <button id="submit">Submit</button>
+
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
